@@ -38,10 +38,10 @@
         let edge2 = +document.getElementById("edge2").value;
         let edge3 = +document.getElementById("edge3").value;
         if ((Math.abs(edge1-edge2) < edge3) && (edge3 < (edge1 + edge2))) {
-            if ((edge1 == edge2) || (edge2 == edge3) || (edge3 == edge1)) {
-                document.getElementById("triangle").innerHTML = "Isosceles triangle";
-            } else if ((edge1 == edge2) && (edge2 == edge3) && (edge3 == edge1)) {
+            if ((edge1 == edge2) && (edge2 == edge3) && (edge3 == edge1)) {
                 document.getElementById("triangle").innerHTML = "Equilateral triangle";
+            } else if ((edge1 == edge2) || (edge2 == edge3) || (edge3 == edge1)) {
+                document.getElementById("triangle").innerHTML = " Isosceles triangle";
             } else if ((edge1 * edge1 == edge2 * edge2 + edge3 * edge3) || (edge2 * edge2 == edge3 * edge3 + edge1 * edge1) || (edge3 * edge3 == edge2 * edge2 + edge1 * edge1)) {
                 document.getElementById("triangle").innerHTML = "Right triangle";
             } else {
